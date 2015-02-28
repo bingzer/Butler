@@ -1,0 +1,23 @@
+project.ext.set("archivesBaseName", "butler-app-sample");
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion Integer.parseInt(project.VERSION_SDK)
+    buildToolsVersion project.VERSION_TOOLS
+
+    defaultConfig {
+        applicationId project.GROUP
+        minSdkVersion Integer.parseInt(project.VERSION_SDK_MIN)
+        targetSdkVersion Integer.parseInt(project.VERSION_SDK_TARGET)
+        versionCode Integer.parseInt(project.VERSION_CODE)
+        versionName project.VERSION_NAME
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:+'
+
+    compile project(':Library:Core')
+    compile project(':Library:Eula')
+}

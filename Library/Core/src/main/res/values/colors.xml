@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="holo_dark_blue">#0099cc</color>
+    <color name="holo_light_blue">#33b5e5</color>
+    <color name="holo_light_blue_thin">#00ddff</color>
+    <color name="holo_dark_blue_alpha">#FF0099cc</color>
+    <color name="holo_light_blue_alpha">#AA33b5e5</color>
+    <color name="holo_green">#669966</color>
+    <color name="holo_green_alpha">#99669966</color>
+    <color name="holo_yellow">#C5C532</color>
+    <color name="holo_light_green">#ff99cc00</color>
+    <color name="holo_light_green_alpha">#55B8E65C</color>
+    <color name="holo_black">#000</color>
+    <color name="holo_white">#F5F5F5</color>
+    <color name="holo_white_smoke">#F5F5F5</color>
+    <color name="holo_white_lavender">#FFFAF0</color>
+    <color name="holo_white_alpha">#AABBFF</color>
+    <color name="holo_gray">#D0D0D0</color>
+    <color name="holo_light_gray">#E8E8E8</color>
+    <color name="holo_light_gray_alpha">#FFE8E8E8</color>
+    <color name="holo_dark_gray">#A0A0A0</color>
+    <color name="holo_red">#882323</color>
+    <color name="holo_red_alpha">#99882323</color>
+    <color name="holo_orange">#ff9811</color>
+</resources>

@@ -1,0 +1,16 @@
+include ':Library:Core'
+include ':Library:Eula'
+include ':Library:Encoders'
+
+include ':Patterns:Async'
+include ':Patterns:UICommand'
+include ':Patterns:Implementor'
+
+include ':Views:DraggableListView'
+include ':Views:EndlessPagerAdapter'
+include ':Views:SlidingTabLayout'
+include ':Views:Pickers'
+include ':Views:SimpleAdapter'
+include ':Views:SearchView'
+
+include ':Sample'

@@ -1,0 +1,22 @@
+project.ext.set("archivesBaseName", "butler-eula");
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion Integer.parseInt(project.VERSION_SDK)
+    buildToolsVersion project.VERSION_TOOLS
+
+    defaultConfig {
+        minSdkVersion Integer.parseInt(project.VERSION_SDK_MIN)
+        targetSdkVersion Integer.parseInt(project.VERSION_SDK_TARGET)
+        versionCode Integer.parseInt(project.VERSION_CODE)
+        versionName project.VERSION_NAME
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:+'
+    compile project(':Library:Core')
+}
+
+apply from: 'https://raw.github.com/bingzer/gradle-mvn-push/master/gradle-mvn-push.gradle'
