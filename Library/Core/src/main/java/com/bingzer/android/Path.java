@@ -15,10 +15,10 @@
  */
 package com.bingzer.android;
 
-import com.bingzer.android.patterns.async.Delegate;
-import com.bingzer.android.patterns.async.Result;
-import com.bingzer.android.patterns.async.Task;
-import com.bingzer.android.patterns.async.handlers.ResultHandler;
+import com.bingzer.android.async.Delegate;
+import com.bingzer.android.async.Result;
+import com.bingzer.android.async.Task;
+import com.bingzer.android.async.handlers.ResultHandler;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -36,7 +36,7 @@ import java.nio.channels.FileChannel;
 import java.util.Locale;
 
 import static com.bingzer.android.Stringify.emptyIfNull;
-import static com.bingzer.android.patterns.async.Async.doAsync;
+import static com.bingzer.android.async.Async.doAsync;
 
 public final class Path {
 
@@ -257,6 +257,9 @@ public final class Path {
     }
 
     public static File[] getFiles(File dir, final String... extensions) {
+        if (Collector.isEmpty(extensions))
+            return dir.listFiles();
+
         return dir.listFiles(new FileFilter(){
             @Override public boolean accept(File file) {
                 boolean accept = false;

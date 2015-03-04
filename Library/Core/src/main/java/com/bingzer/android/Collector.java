@@ -25,6 +25,24 @@ import java.util.Iterator;
 public final class Collector {
 
     /**
+     * Checks to see if there's anything in 'args'.
+     * True if args is null or args.length == 0.
+     * Otherwise, false
+     */
+    public static boolean isEmpty(Object... args){
+        return args == null || args.length == 0;
+    }
+
+    /**
+     * Checks to see if a collection is an empty collection.
+     * Returns true if collection is either null or size is 0.
+     * Otherwise, false.
+     */
+    public static boolean isEmpty(Collection<?> collection){
+        return collection == null || collection.size() == 0;
+    }
+
+    /**
      * Count the 'size' of base iterable
      * @param iterable the iterable
      * @return the size
