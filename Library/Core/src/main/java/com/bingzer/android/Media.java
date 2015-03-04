@@ -14,8 +14,8 @@ import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.util.Log;
 
-import com.bingzer.android.patterns.async.Delegate;
-import com.bingzer.android.patterns.async.Task;
+import com.bingzer.android.async.Delegate;
+import com.bingzer.android.async.Task;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -23,7 +23,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import static com.bingzer.android.patterns.async.Async.doAsync;
+import static com.bingzer.android.async.Async.doAsync;
 
 public class Media {
 

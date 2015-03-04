@@ -15,7 +15,7 @@ android {
 }
 
 dependencies {
-    compile project(':Patterns:Async')   // this will be in the maven central (has separate project in github)
+    compile 'com.bingzer.android.async:async:1.0.0-SNAPSHOT'
 
     // -- Mockito
     androidTestCompile 'org.mockito:mockito-core:1.9.5'

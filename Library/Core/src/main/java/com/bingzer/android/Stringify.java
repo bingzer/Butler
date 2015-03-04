@@ -15,13 +15,13 @@
  */
 package com.bingzer.android;
 
-import com.bingzer.android.patterns.async.Delegate;
-import com.bingzer.android.patterns.async.Task;
+import com.bingzer.android.async.Delegate;
+import com.bingzer.android.async.Task;
 
 import java.io.IOException;
 import java.util.List;
 
-import static com.bingzer.android.patterns.async.Async.doAsync;
+import static com.bingzer.android.async.Async.doAsync;
 
 /**
  * Utility related to string

@@ -1,8 +1,8 @@
 package com.bingzer.android;
 
-import com.bingzer.android.patterns.async.Result;
-import com.bingzer.android.patterns.async.Task;
-import com.bingzer.android.patterns.async.handlers.ResultHandler;
+import com.bingzer.android.async.Result;
+import com.bingzer.android.async.Task;
+import com.bingzer.android.async.handlers.ResultHandler;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,7 +14,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
-import static com.bingzer.android.patterns.async.Async.doAsync;
+import static com.bingzer.android.async.Async.doAsync;
 
 /**
  * ZipUtils.
