@@ -2,10 +2,12 @@ package com.bingzer.android;
 
 import android.test.AndroidTestCase;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 
 import static com.bingzer.android.Collector.contains;
+import static com.bingzer.android.Collector.isEmpty;
 import static com.bingzer.android.Collector.size;
 import static com.bingzer.android.Collector.toArray;
 
@@ -39,6 +41,14 @@ public class CollectorTest extends AndroidTestCase{
         assertEquals(3, (int) array[2]);
         assertEquals(4, (int) array[3]);
         assertEquals(5, (int) array[4]);
+    }
+
+    public void test_isEmpty(){
+        assertEquals(true, isEmpty(new ArrayList<>()));
+
+        Collection<String> collection = new ArrayList<>();
+        collection.add("One");
+        assertEquals(false, isEmpty(collection));
     }
 
 }
