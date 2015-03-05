@@ -34,7 +34,7 @@ import android.view.animation.AnimationUtils;
  *
  */
 @SuppressWarnings("UnusedDeclaration")
-public class Anim {
+public final class Anim {
 
     public static Anim with(View view, int animResId){
         return new Anim(view, animResId);

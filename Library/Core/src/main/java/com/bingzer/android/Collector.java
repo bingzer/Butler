@@ -104,6 +104,7 @@ public final class Collector {
     /**
      * Returns parameterized any to its own array
      */
+    @SuppressWarnings("unchecked")
     public static <T> T[] toArray(T... any){
         return any;
     }

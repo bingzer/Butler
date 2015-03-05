@@ -22,7 +22,7 @@ import android.view.View;
 import com.bingzer.android.Dimension;
 
 @SuppressWarnings("UnusedDeclaration")
-public class ViewUtils {
+public final class ViewUtils {
 
 	/**
 	 * Returns the current view location on screen
@@ -67,5 +67,11 @@ public class ViewUtils {
 
         DisplayMetrics metrics = context.getResources().getDisplayMetrics();
         return (dp * (metrics.densityDpi / 160f));
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+
+    private ViewUtils(){
+        // nothing
     }
 }

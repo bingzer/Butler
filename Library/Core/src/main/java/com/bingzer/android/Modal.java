@@ -49,7 +49,7 @@ import java.util.LinkedList;
  * @author Ricky Tobing
  */
 @SuppressWarnings("UnusedDeclaration")
-public class Modal extends AlertDialog implements DialogInterface.OnClickListener, DialogInterface.OnDismissListener{
+public final class Modal extends AlertDialog implements DialogInterface.OnClickListener, DialogInterface.OnDismissListener{
 
     public static int GAP      = 5;
     

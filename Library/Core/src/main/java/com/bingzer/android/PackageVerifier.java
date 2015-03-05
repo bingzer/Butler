@@ -31,7 +31,7 @@ import javax.security.cert.X509Certificate;
  * Used to verify a pacakge name against specified public key
  */
 @SuppressWarnings("UnusedDeclaration")
-public class PackageVerifier {
+public final class PackageVerifier {
 	
 	private boolean checked = false;
 	private boolean verified = false;
@@ -107,4 +107,10 @@ public class PackageVerifier {
 		
 		return verified;
 	}
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+
+    private PackageVerifier(){
+        // nothing
+    }
 }

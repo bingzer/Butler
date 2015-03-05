@@ -32,7 +32,7 @@ import java.net.URISyntaxException;
  */
 @SuppressWarnings("UnusedDeclaration")
 @SuppressLint("DefaultLocale")
-public class GlobalIntents {
+public final class GlobalIntents {
 
     private static final String TAG = "GlobalIntents";
 
@@ -142,5 +142,11 @@ public class GlobalIntents {
         catch (Throwable e){
             throw new RuntimeException(e);
         }
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+
+    private GlobalIntents(){
+        // nothing
     }
 }

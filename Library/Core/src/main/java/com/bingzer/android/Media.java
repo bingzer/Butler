@@ -25,7 +25,7 @@ import java.io.OutputStream;
 
 import static com.bingzer.android.async.Async.doAsync;
 
-public class Media {
+public final class Media {
 
     public static String getPath(final Context context, Intent data){
         String filePath = null;
@@ -223,5 +223,11 @@ public class Media {
      */
     public static boolean isGooglePhotosUri(Uri uri) {
         return "com.google.android.apps.photos.content".equals(uri.getAuthority());
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+
+    private Media(){
+        // nothing
     }
 }
