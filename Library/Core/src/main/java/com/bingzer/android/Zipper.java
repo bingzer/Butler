@@ -59,7 +59,7 @@ public final class Zipper {
      */
     public static void zip(File directory, File zipFile) throws IOException {
         Result result = zip(directory, zipFile, null);
-        if(result.isSuccess())
+        if(!result.isSuccess())
             throw new IOException(result.getError());
     }
 
@@ -99,7 +99,7 @@ public final class Zipper {
      */
     public static void unzip(File zipFile, File directory) throws IOException{
         Result result = unzip(zipFile, directory, null);
-        if (result.isSuccess())
+        if (!result.isSuccess())
             throw new IOException(result.getError());
     }
 
