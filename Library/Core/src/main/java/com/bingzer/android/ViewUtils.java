@@ -18,11 +18,26 @@ package com.bingzer.android;
 import android.content.Context;
 import android.util.DisplayMetrics;
 import android.view.View;
-
-import com.bingzer.android.Dimension;
+import android.view.Window;
 
 @SuppressWarnings("UnusedDeclaration")
 public final class ViewUtils {
+
+    /**
+     * Find View by Id
+     */
+    @SuppressWarnings("unchecked")
+    public static <V extends View> V findView(View parent, int id){
+        return (V) parent.findViewById(id);
+    }
+
+    /**
+     * Find view by id
+     */
+    @SuppressWarnings("unchecked")
+    public static <V extends View> V findViewById(Window window, int id){
+        return (V) window.findViewById(id);
+    }
 
 	/**
 	 * Returns the current view location on screen
