@@ -12,4 +12,4 @@ include ':Views:Pickers'
 include ':Views:SimpleAdapter'
 include ':Views:SearchView'
 
-include ':Sample'
+// include ':Sample'
