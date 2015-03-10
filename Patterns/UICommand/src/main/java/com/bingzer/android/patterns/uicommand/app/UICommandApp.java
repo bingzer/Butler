@@ -3,7 +3,7 @@ package com.bingzer.android.patterns.uicommand.app;
 import com.bingzer.android.AndroidApp;
 import com.bingzer.android.patterns.UICommand;
 
-public abstract class UICommandApp extends AndroidApp implements UICommand.Listener {
+public class UICommandApp extends AndroidApp implements UICommand.Listener {
 
     @Override
     public void onCreate() {
