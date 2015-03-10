@@ -3,7 +3,6 @@ include ':Library:Eula'
 include ':Library:Encoders'
 
 include ':Patterns:UICommand'
-include ':Patterns:Implementor'
 
 include ':Views:DraggableListView'
 include ':Views:EndlessPagerAdapter'
