@@ -15,7 +15,6 @@ android {
 }
 
 dependencies {
-    compile project(':Library:Core')
 }
 
 apply from: 'https://raw.github.com/bingzer/gradle-mvn-push/master/gradle-mvn-push.gradle'
