@@ -36,9 +36,7 @@ public abstract class AndroidApp extends Application {
 
         final String TAG = getApplicationName();
         Log.i(TAG, "Starting " + getApplicationName());
-        Log.i(TAG, "Package Name: " + Res.getPackageName());
-        Log.i(TAG, "Version Name: " + Res.getVersionName());
-        Log.i(TAG, "Version Code: " + Res.getVersionCode());
+        Log.i(TAG, "Package Name: " + getPackageName());
     }
 
     @Override
