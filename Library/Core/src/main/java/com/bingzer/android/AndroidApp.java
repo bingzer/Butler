@@ -16,38 +16,42 @@
 package com.bingzer.android;
 
 import android.app.Application;
-import android.content.Context;
 import android.util.Log;
 
 /**
  * Extending this will set Res.setBaseContext() automatically.
  */
-public abstract class AndroidApp extends Application {
+public class AndroidApp extends Application {
 
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
-        Res.setBaseContext(this);
-    }
+    protected String name;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        Res.setBaseContext(this);
 
-        final String TAG = getApplicationName();
-        Log.i(TAG, "Starting " + getApplicationName());
-        Log.i(TAG, "Package Name: " + getPackageName());
+        name = Res.getApplicationName();
+        Log.i(name, "Starting " + name);
+        Log.i(name, "Package Name: " + Res.getPackageName());
+        Log.i(name, "Version Name: " + Res.getVersionName());
+        Log.i(name, "Version Code: " + Res.getVersionCode());
+        Log.i(name, "Debuggable  : " + isDebuggable());
     }
 
     @Override
     public void onTerminate() {
         super.onTerminate();
 
-        Log.i(getApplicationName(), "onTerminate()");
+        Log.i(name, "onTerminate()");
     }
 
-    /**
-     * Returns the application name
-     */
-    protected abstract String getApplicationName();
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    public final String getApplicationName(){
+        return name;
+    }
+
+    public final boolean isDebuggable(){
+        return Res.isApplicationDebuggable();
+    }
 }

@@ -73,13 +73,19 @@ public final class Res {
     }
 
     /**
-     * Returns true if there's a name
+     * Returns the ApplicationInfo
+     * @return ApplicationInfo
+     */
+    public static ApplicationInfo getApplicationInfo(){
+        return Res.getContext().getApplicationInfo();
+    }
+
+    /**
+     * Returns the 'label' in the manifest
      * @return the application name if it doesn't exist returns the package name
      */
     public static String getApplicationName(){
-        if(context instanceof AndroidApp)
-            return ((AndroidApp) context).getApplicationName();
-        return getPackageName();
+        return getApplicationInfo().loadLabel(Res.getPackageManager()).toString();
     }
 
     /**

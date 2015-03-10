@@ -1,0 +1,10 @@
+<manifest
+    package="com.bingzer.android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="99"
+    android:versionName="ButlerVersion1.1">
+    <application
+        android:label="ButlerAndroidApplicationTest"
+        android:debuggable="true"
+        android:name="com.bingzer.android.TestApp"/>
+</manifest>
