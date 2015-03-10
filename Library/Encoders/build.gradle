@@ -14,14 +14,8 @@ android {
     }
 }
 
-
-configurations.all {
-    // check for updates every build
-    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
-}
-
 dependencies {
-    compile (group:'com.bingzer.android.patterns', name: 'implementor', version:'1.0.0-SNAPSHOT', changing: true)
+    compile 'com.bingzer.android.patterns:implementor:1.0.0'
     provided 'org.jcodec:jcodec:0.1.9'
 
     androidTestCompile project(':Library:Core')
