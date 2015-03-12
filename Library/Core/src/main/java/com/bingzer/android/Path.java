@@ -257,7 +257,7 @@ public final class Path {
     }
 
     public static File[] getFiles(File dir, final String... extensions) {
-        if (extensions == null)
+        if (extensions == null || extensions.length == 0)
             return dir.listFiles();
 
         return dir.listFiles(new FileFilter(){
