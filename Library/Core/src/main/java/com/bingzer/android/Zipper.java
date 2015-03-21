@@ -9,6 +9,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Collection;
 import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
@@ -168,14 +169,49 @@ public final class Zipper {
         return result;
     }
 
+    /**
+     * Zips collections of {@code files} to {@code zipFile}
+     * Each file is checked must be direct/indirect child of {@code directory}.
+     */
+    public static Result zip(File directory, Collection<File> files, File zipFile, Zipper.ZippingCallback callback){
+        Result result = new Result();
+        try {
+            final int total = files.size();
+            int progress = 0;
+
+            ZipOutputStream zipOutput = new ZipOutputStream(new FileOutputStream(zipFile));
+            for (File file : files){
+                if (file.isDirectory()) continue;
+
+                ZipEntry entry = new ZipEntry(relativizePath(directory, file));
+                zipOutput.putNextEntry(entry);
+
+                InputStream in = new FileInputStream(file);
+                Path.copy(in, zipOutput, false);
+                in.close();
+
+                zipOutput.closeEntry();
+
+                if(callback != null)
+                    callback.onProgress(++progress, total);
+            }
+            zipOutput.close();
+
+            result.setSuccess(true);
+        } catch (IOException e){
+            result.setError(e);
+            result.setSuccess(false);
+        }
+        return result;
+    }
+
     /////////////////////////////////////////////////////////////////////////////////////////////
 
     private static String relativizePath(File directory, File file){
-        int index = file.getAbsolutePath().lastIndexOf(directory.getAbsolutePath());
-        if (index > 0){
-            return file.getAbsolutePath().substring(index);
-        }
-        return file.getName();
+        String name = file.getAbsolutePath().substring(directory.getAbsolutePath().length());
+        if (name.startsWith("/"))
+            name = name.substring(1);
+        return name;
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////
