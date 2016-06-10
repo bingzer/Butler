@@ -16,7 +16,7 @@ android {
 
 dependencies {
     compile 'com.bingzer.android.patterns:implementor:1.0.0'
-    provided 'org.jcodec:jcodec:0.1.9'
+    compile 'org.jcodec:jcodec:0.1.9'
 
     androidTestCompile project(':Library:Core')
 }
