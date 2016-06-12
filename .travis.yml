@@ -19,3 +19,5 @@ before_install:
 
 script:
  - ./gradlew connectedAndroidTest
+
+sudo: false
