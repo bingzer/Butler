@@ -18,6 +18,10 @@ before_install:
  - adb shell input keyevent 82 &
 
 script:
- - ./gradlew connectedAndroidTest
+ - ./gradlew Library:Core:connectedAndroidTest
+ - ./gradlew Library:Eula:connectedAndroidTest
+ - ./gradlew Patterns:UICommand:connectedAndroidTest
+ - ./gradlew Views:connectedAndroidTest
+
 
 sudo: false
