@@ -12,11 +12,15 @@ android {
         versionCode Integer.parseInt(project.VERSION_CODE)
         versionName project.VERSION_NAME
     }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:appcompat-v7:+'
     compile project(':Library:Core')
 }
 
-apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
+apply from: 'https://raw.github.com/bingzer/gradle-mvn-push/master/gradle-mvn-push.gradle'

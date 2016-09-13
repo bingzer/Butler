@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bingzer.android.babycare.views;
+package com.bingzer.android.views;
 
 import android.content.Context;
 import android.graphics.Typeface;

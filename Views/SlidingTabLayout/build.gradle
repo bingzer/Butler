@@ -12,6 +12,10 @@ android {
         versionCode Integer.parseInt(project.VERSION_CODE)
         versionName project.VERSION_NAME
     }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -21,4 +25,4 @@ dependencies {
     compile 'com.github.johnkil.android-robototextview:robototextview:2.1.0'
 }
 
-apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
+apply from: 'https://raw.github.com/bingzer/gradle-mvn-push/master/gradle-mvn-push.gradle'
