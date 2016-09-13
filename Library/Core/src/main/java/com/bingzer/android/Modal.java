@@ -46,10 +46,15 @@ import java.util.LinkedList;
  * Modal.confirm(context, "Message").show(callback);
  * </pre>
  *
+ * <p>
+ *     Not a final class, because we may need to extends it in the future
+ *     in different project
+ * </p>
+ *
  * @author Ricky Tobing
  */
 @SuppressWarnings("UnusedDeclaration")
-public final class Modal extends AlertDialog implements DialogInterface.OnClickListener, DialogInterface.OnDismissListener{
+public class Modal extends AlertDialog implements DialogInterface.OnClickListener, DialogInterface.OnDismissListener{
 
     public static int GAP      = 5;
     
